@@ -1,7 +1,11 @@
-export function pour(volume) {
-    return volume
+class Barmen {
+    pour(volumeInGrams) {
+        return volumeInGrams;
+    }
+
+    free() {
+
+    }
 }
 
-export function free() {
-
-}
+module.exports = Barmen;
