@@ -1,2 +1,3 @@
-# NetologyXP.UnitTesting
-Практические занятия по UnitTesting (курс Нетологии http://netology.ru/programs/xp)
+# NetologyXP.UnitTesting.NamingAndStructure
+ - Практические занятия по UnitTesting 
+ - Курс Нетологии http://netology.ru/programs/xp
