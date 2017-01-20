@@ -11,19 +11,19 @@ var Barmen = require('../src/barmen');
 //
 
 describe('Barmen tests', function () {
-    it('pour whisky_I ask for 50 grams_I got glass with 50 gram', function () {
+    it('pour whisky - I ask for 50 grams - I got glass with 50 gram', function () {
 
     });
 
-    it('pour whisky_I ask 200 Grams_barmen rejects', function () {
+    it('pour whisky - I ask 200 Grams - barmen rejects', function () {
 
     });
 
-    it('pour whisky_I am drunk_barmen rejects', function () {
+    it('pour whisky - I am drunk - barmen rejects', function () {
 
     });
 
-    it('pour whisky_I am less than 18 years old_barmen calls policeman', function () {
+    it('pour whisky - I am less than 18 years old - barmen calls policeman', function () {
 
     });
 });
