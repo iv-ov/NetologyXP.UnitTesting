@@ -1,58 +1,29 @@
 var assert = require('assert');
 var Barmen = require('../src/barmen');
 
+//
 // <ClassNameTests>.<Act>_<Arrange>_<Assert>
-describe('BarmenTests', function () {
-    it('pourMeWhisky_IAsk50Grams_IGotGlassWith50Gram', function () {
-
-    });
-
-    it('pourMeWhisky_IAsk200Grams_BarmenRejected', function () {
-
-    });
-
-    it('pourMeWhisky_IAmDrunked_BarmenRejected', function () {
-
-    });
-});
-
-describe('When barmen pours whisky', function () {
-    describe('I ask 50 gram', function () {
-        it('he gives me a glass with 50 grams', function () {
-
-        })
-    });
-
-    describe('I ask 200 gram', function () {
-        it('barmen rejects', function () {
-
-        })
-    })
-});
-
-describe('I got 50 gram whisky', function () {
-    let volumeInGlass = 50;
-
-    it('I asked barmen for 50 grams', function () {
-        assert.equal(50, volumeInGlass);
-    });
-
-    it('Invited friend and got free whisky', function () {
-        assert.equal(50, volumeInGlass);
-    });
-
-    it('Friend ordered me a 50 gram whisky', function () {
-        assert.equal(50, volumeInGlass);
-    })
-});
-
-// BarmenShouldGiveWiskeyFor18Age
-// arrange var bool: isViskeyWasGiven; var barmen; var age = 25
-// act viskey = function('barmenGiveViskey');
-// assert (viskey, true);
 //
+//  DefaultPageTests
+//    LoadMovies_Admin_ShowAll
+//    LoadMovies_UserElder18_ShowAll
+//    LoadMovies_UserYonger18_ShowNewReleases
 //
-// BarmenShouldNOTGiveWiskeyForNOT18Age
-// arrange var bool: isViskeyWasGiven; var barmen; var age = 17
-// act viskey = function('barmenGiveViskey');
-// assert (viskey, false)
+
+describe('Barmen tests', function () {
+    it('pour whisky_I ask for 50 grams_I got glass with 50 gram', function () {
+
+    });
+
+    it('pour whisky_I ask 200 Grams_barmen rejects', function () {
+
+    });
+
+    it('pour whisky_I am drunk_barmen rejects', function () {
+
+    });
+
+    it('pour whisky_I am less than 18 years old_barmen calls policeman', function () {
+
+    });
+});
