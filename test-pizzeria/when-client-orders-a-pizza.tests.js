@@ -17,6 +17,7 @@
 
 var assert = require('assert');
 var User = require('../src/user');
+var Pizza = require('../src/pizza');
 var Utils = require('../src/utils');
 
 describe('When client orders a pizza', ()=>{
