@@ -32,7 +32,7 @@ describe('When client orders a pizza', ()=>{
 		let someDate = Utils.makeDatetime('12 april');
 		shop.setTime(someDate);
 		client.setBirthday(someDate);
-            
+
         it('special sweet free pizza is added to his cart', ()=>{
             // arrange
             let somePizza = new Pizza({id: 'margarita'});
@@ -40,10 +40,24 @@ describe('When client orders a pizza', ()=>{
 
             // act
             client.addToCart(somePizza);
-            let clientCart = client.getCart();
 
             // assert
+            let clientCart = client.getCart();
             assert(true, clientCart.contains(specialPizza));
+        });
+    });
+    describe('if promocode "ABCD" provided', ()=>{
+        it('discount 100 rubles', ()=>{
+            // arrange
+            let somePizza = new Pizza({id: 'margarita'});
+
+            // act
+            client.addToCart(somePizza);
+            client.setPromocode("ABCD");
+
+            // assert
+            let orderDiscount = client.getCart().getDiscount();
+            assertEqual(100, orderDiscount);
         });
     });
 });
