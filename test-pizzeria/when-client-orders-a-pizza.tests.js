@@ -98,4 +98,18 @@ describe('When client orders a pizza', ()=>{
             assertEqual(5/100, bonus/orderCost);
         });
     });
+
+
+    describe('if bonus account is not empty', ()=>{
+        it('client can use bonus points to purchase', ()=>{
+            // arrange
+            client.addBonusPoints(123);
+
+            // act
+            let paymentMethods = client.getAvailablePaymentMethods();
+
+            // assert
+            assert(true, paymentMethods.contains('bonusPoints'));
+        });
+    });
 });
