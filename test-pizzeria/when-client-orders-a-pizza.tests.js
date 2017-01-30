@@ -80,4 +80,22 @@ describe('When client orders a pizza', ()=>{
         });
     });
 
+
+    describe('if order is paid', ()=>{
+        it('client gets 5% as a bonus', ()=>{
+            // arrange
+            let somePizza = new Pizza({id: 'margarita'});
+            let someOtherPizza = new Pizza({id: 'pepperoni'});
+            client.addToCart(somePizza);
+            client.addToCart(someOtherPizza);
+
+            // act
+            let orderCost = client.getCart().getCost();
+            client.purchase();
+
+            // assert
+            let bonus = client.getLastAddedBonus();
+            assertEqual(5/100, bonus/orderCost);
+        });
+    });
 });
