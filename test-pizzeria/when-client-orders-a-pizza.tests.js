@@ -46,6 +46,8 @@ describe('When client orders a pizza', ()=>{
             assert(true, clientCart.contains(specialPizza));
         });
     });
+
+
     describe('if promocode "ABCD" provided', ()=>{
         it('discount 100 rubles', ()=>{
             // arrange
@@ -60,4 +62,22 @@ describe('When client orders a pizza', ()=>{
             assertEqual(100, orderDiscount);
         });
     });
+
+
+    describe('if 2 pizzas ordered and it\'s 10:00-16:00', ()=>{
+        it('discount is 20%', ()=>{
+            // arrange
+            let somePizza = new Pizza({id: 'margarita'});
+            let someOtherPizza = new Pizza({id: 'pepperoni'});
+
+            // act
+            client.addToCart(somePizza);
+            client.addToCart(someOtherPizza);
+
+            // assert
+            let orderDiscount = client.getCart().getDiscount();
+            assertEqual('20 %', orderDiscount);
+        });
+    });
+
 });
