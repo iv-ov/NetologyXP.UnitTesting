@@ -59,7 +59,7 @@ describe('When client orders a pizza', ()=>{
 
             // assert
             let orderDiscount = client.getCart().getDiscount();
-            assertEqual(100, orderDiscount);
+            assertEqual('100 rubles', orderDiscount);
         });
     });
 
